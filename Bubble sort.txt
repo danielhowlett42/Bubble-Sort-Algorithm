@@ -1,0 +1,33 @@
+var arr = [1,5,2,3,7,8,5,3,2,2,4,5,6,7,8,5,4,2,3,4,5,6,7,1,2,3,3,4,5,2];
+var wordarr = ["a","asdfas","vf","lijhadsf","fds","asdfasdfsadf","ad","efdsac","asdfaec"];
+var numberbubblesort = function(inputarray){
+                var temp; //like most other shuffles and sorts, a temporary placeholder is required
+                for (i = 1; i < inputarray.length; i++){
+                                for (j = 0; j < inputarray.length - 1; j++){
+                                                if (inputarray[j] > inputarray[j + 1]){ //compares if the current cell is larger than the next cell
+                                                                temp = inputarray[j];
+                                                                inputarray[j] = inputarray[j + 1];
+                                                                inputarray[j + 1] = temp;
+                                                }
+                                }
+                }
+};
+var wordlengthbubblesort = function(inputarray){
+                var temp;
+                for (i = 1; i < inputarray.length; i++){
+                                for (j = 0; j < inputarray.length - 1; j++){
+                                                if (inputarray[j].length > inputarray[j + 1].length){ //compares the the length of the word in the current cell is larger than the next
+                                                                temp = inputarray[j];
+                                                                inputarray[j] = inputarray[j + 1];
+                                                                inputarray[j + 1] = temp;
+                                                }
+                                }
+                }
+}
+console.log(arr);//before
+numberbubblesort(arr);
+console.log(arr);//after
+ 
+console.log(wordarr);//before
+wordlengthbubblesort(wordarr);
+console.log(wordarr);//after
