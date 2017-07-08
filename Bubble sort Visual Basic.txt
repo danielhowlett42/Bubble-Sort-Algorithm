@@ -1,0 +1,51 @@
+Module Module1
+    Sub Main()
+        Dim numbers = New Integer() {1, 0, 5, 2, 3, 4, 5, 6, 7, 1, 2, 4, 5, 6, 7, 4, 2, 3}
+        Dim words = New String() {"feaxz", "fs", "f", "er", "yefv", "aasdwad", "fcqwqwe", "fsadtu7i", "hbfst", "sfd", "ff", "fff", "hk", "k", "xfhgytn"}
+
+        For x = 0 To numbers.Length - 1
+            Console.Write(numbers(x))
+        Next
+        Console.WriteLine()
+        numberbubblesort(numbers)
+        For x = 0 To numbers.Length - 1
+            Console.Write(numbers(x))
+        Next
+        Console.WriteLine()
+        For x = 0 To words.Length - 1
+            Console.Write(words(x))
+            Console.Write(", ")
+        Next
+        Console.WriteLine()
+        wordbubblesort(words)
+        For x = 0 To words.Length - 1
+            Console.Write(words(x))
+            Console.Write(", ")
+        Next
+        Console.ReadLine()
+    End Sub
+    Sub numberbubblesort(ByVal inputarray As Array)
+        Dim temp As Integer
+        For i = 1 To inputarray.Length - 1
+            For j = 0 To (inputarray.Length - 2)
+                If inputarray(j) > inputarray(j + 1) Then
+                    temp = inputarray(j)
+                    inputarray(j) = inputarray(j + 1)
+                    inputarray(j + 1) = temp
+                End If
+            Next
+        Next
+    End Sub
+    Sub wordbubblesort(ByVal inputarray As Array)
+        Dim temp As String
+        For i = 1 To inputarray.Length - 1
+            For j = 0 To (inputarray.Length - 2)
+                If inputarray(j).length > inputarray(j + 1).length Then
+                    temp = inputarray(j)
+                    inputarray(j) = inputarray(j + 1)
+                    inputarray(j + 1) = temp
+                End If
+            Next
+        Next
+    End Sub
+End Module
